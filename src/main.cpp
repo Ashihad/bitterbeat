@@ -1,3 +1,5 @@
+#include "Logger.hpp"
+
 #include <SFML/Graphics.hpp>
 #include <SFML/Window.hpp>
 
@@ -30,6 +32,8 @@ int main() {
   sf::RenderWindow window(sf::VideoMode(smallScreen), "BitterBeat");
   // 60 fps
   window.setFramerateLimit(60);
+
+	Logger::getInstance() << "Hello from logger!";
 
 	bool success = window.setActive(false);
 	if (!success) {
