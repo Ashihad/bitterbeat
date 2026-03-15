@@ -1,3 +1,6 @@
+# Link defaults to every target under src/
+link_libraries(PROJECT_DEFAULTS)
+
 set(LOGGER_NAME "logger")
 add_subdirectory(logger)
 
@@ -25,8 +28,4 @@ target_link_libraries(
     ${ENTITY_NAME}
     ${PARTICLE_NAME}
     ${BUTTON_NAME}
-)
-
-target_set_warnings(TARGET ${BINARY_NAME} ENABLE "YES" AS_ERRORS
-                    ${ENABLE_WARNINGS_AS_ERRORS}
 )
